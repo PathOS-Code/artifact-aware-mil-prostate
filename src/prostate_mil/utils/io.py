@@ -29,3 +29,30 @@ def save_tensor(tensor: torch.Tensor, output_path: str | Path) -> Path:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     torch.save(tensor, output_path)
     return output_path
+
+
+def find_checkpoint(run_dir: str | Path) -> Path | None:
+    """Return the run's weight file: best_model.safetensors, else best_model.pt."""
+
+    run_dir = Path(run_dir)
+    for name in ("best_model.safetensors", "best_model.pt"):
+        if (run_dir / name).exists():
+            return run_dir / name
+    return None
+
+
+def load_model_state(run_dir: str | Path) -> dict[str, torch.Tensor]:
+    """Load a run's model state_dict on CPU.
+
+    Released weights are ``best_model.safetensors``; training writes
+    ``best_model.pt`` (state_dict plus optimizer state and metadata).
+    """
+
+    path = find_checkpoint(run_dir)
+    if path is None:
+        raise FileNotFoundError(f"No best_model.safetensors or best_model.pt in {run_dir}")
+    if path.suffix == ".safetensors":
+        from safetensors.torch import load_file
+
+        return load_file(str(path), device="cpu")
+    return torch.load(path, map_location="cpu", weights_only=False)["model_state_dict"]

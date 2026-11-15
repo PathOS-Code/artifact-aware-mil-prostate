@@ -96,11 +96,17 @@ uv run python scripts/evaluation/ci_from_confusion_matrices.py
 
 ## Pretrained weights
 
-The MIL heads of the reported ensembles (optimizer state removed, about
-160 MB per TransMIL-style member) are available at: TODO (Zenodo DOI).
+The 30 MIL heads behind every ensemble in the paper are on Hugging Face:
+[PathOS-Code/artifact-aware-mil-prostate](https://huggingface.co/PathOS-Code/artifact-aware-mil-prostate)
+(safetensors, about 4.1 GB in total, same folder names as `results/runs/`).
 They are released under CC BY-NC-SA 4.0 because they were trained on PANDA.
 They take Virchow2 embeddings as input, so using them requires access to
 Virchow2 under its own license.
+
+```bash
+hf download PathOS-Code/artifact-aware-mil-prostate --local-dir weights
+uv run python scripts/evaluation/ensemble_eval.py   --exp-dirs weights/virchow2_transmil_focal_fullgate_5seed/seed{0,1,2,3,4}   --embeddings-dir outputs/embeddings_virchow2 --labels-csv data/panda_labels.csv   --split-csv splits/panda_fixed_split.csv --out outputs/ensembles/panda.json
+```
 
 ## Tests
 

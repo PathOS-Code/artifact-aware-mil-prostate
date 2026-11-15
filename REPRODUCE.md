@@ -249,7 +249,10 @@ uv run python scripts/inference/generate_heatmap.py \
 
 ## Released weights
 
-To evaluate without training, download the released run directories
-(`best_model.pt` + `config.json`, same names as `results/runs/`) and pass them
-as `--exp-dirs`. The weights were stripped of optimizer state with
-`scripts/training/strip_checkpoint.py`.
+To evaluate without training, download the released run directories from
+Hugging Face (`hf download PathOS-Code/artifact-aware-mil-prostate --local-dir weights`)
+and pass them as `--exp-dirs`. Each holds `best_model.safetensors` and the
+run's `config.json` (same names as `results/runs/`); every evaluation script
+accepts either `best_model.safetensors` or a training `best_model.pt`. The
+release was exported with `scripts/training/export_weights.py`, which checks
+that the exported weights give identical logits to the training checkpoint.

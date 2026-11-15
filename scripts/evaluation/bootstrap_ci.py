@@ -34,6 +34,7 @@ if str(EVAL_ROOT) not in sys.path:
 
 from prostate_mil.training.mil.dataset import SlideEmbeddingDataset
 from prostate_mil.training.mil.splits import fixed_split_indices
+from prostate_mil.utils.io import find_checkpoint, load_model_state
 from ensemble_eval import build_model_from_config
 
 
@@ -56,13 +57,11 @@ def infer_member_probs(
     device: torch.device,
 ) -> np.ndarray:
     config_path = exp_dir / "config.json"
-    ckpt_path = exp_dir / "best_model.pt"
-    if not config_path.exists() or not ckpt_path.exists():
+    if not config_path.exists() or find_checkpoint(exp_dir) is None:
         raise FileNotFoundError(f"Missing config or checkpoint in {exp_dir}")
 
     config = json.loads(config_path.read_text())
-    ckpt = torch.load(ckpt_path, map_location=device, weights_only=False)
-    model = build_model_from_config(config, ckpt["model_state_dict"], device)
+    model = build_model_from_config(config, load_model_state(exp_dir), device)
     ordinal = config.get("loss_type", "focal") == "coral"
 
     probs = []

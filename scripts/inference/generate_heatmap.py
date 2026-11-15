@@ -31,7 +31,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--experiment-dir", type=Path, required=True,
-        help="Experiment directory containing config.json and best_model.pt.",
+        help="Experiment directory containing config.json and best_model.safetensors (or best_model.pt).",
     )
     parser.add_argument(
         "--mask-path", type=Path, default=None,
@@ -155,17 +155,14 @@ def main() -> None:
     print(f"Slide: {slide_name} -- Provider: {provider} -- {len(embeddings)} patches")
 
     # ── 2. Load model from experiment config + checkpoint ───────────
-    config_path = args.experiment_dir / "config.json"
-    ckpt_path = args.experiment_dir / "best_model.pt"
+    from prostate_mil.utils.io import load_model_state
 
+    config_path = args.experiment_dir / "config.json"
     if not config_path.exists():
         raise FileNotFoundError(f"Missing config.json in {args.experiment_dir}")
-    if not ckpt_path.exists():
-        raise FileNotFoundError(f"Missing best_model.pt in {args.experiment_dir}")
 
     config = json.loads(config_path.read_text())
-    checkpoint = torch.load(ckpt_path, map_location=dev, weights_only=False)
-    model = build_model_from_config(config, checkpoint["model_state_dict"], dev)
+    model = build_model_from_config(config, load_model_state(args.experiment_dir), dev)
 
     print(f"Model: {config.get('experiment_name', 'unknown')} "
           f"(gating={config.get('gating')}, aggregator="

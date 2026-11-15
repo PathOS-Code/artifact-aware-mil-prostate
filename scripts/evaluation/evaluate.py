@@ -23,13 +23,14 @@ from prostate_mil.models.mil.model import CustomMILModel
 from prostate_mil.training.mil.dataset import SlideEmbeddingDataset
 from prostate_mil.training.mil.losses import coral_predict
 from prostate_mil.training.mil.splits import fixed_split_indices
+from prostate_mil.utils.io import find_checkpoint, load_model_state
 from prostate_mil.config.defaults import GatingConfig
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Evaluer un modèle et générer la matrice de confusion.")
     parser.add_argument("--exp-dir", type=Path, required=True,
-                        help="Chemin vers le dossier de l'expérience (contenant config.json et best_model.pt)")
+                        help="Chemin vers le dossier de l'expérience (contenant config.json et best_model.safetensors ou best_model.pt)")
     parser.add_argument("--embeddings-dir", type=Path, required=True,
                         help="Dossier contenant les embeddings (.pt)")
     parser.add_argument("--labels-csv", type=Path, required=True,
@@ -54,8 +55,8 @@ def main():
     output_dir = args.output_dir if args.output_dir else args.exp_dir
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    if not (args.exp_dir / "config.json").exists() or not (args.exp_dir / "best_model.pt").exists():
-        print(f"❌ Erreur: config.json ou best_model.pt introuvable dans {args.exp_dir}")
+    if not (args.exp_dir / "config.json").exists() or find_checkpoint(args.exp_dir) is None:
+        print(f"❌ Erreur: config.json ou poids (best_model.safetensors / best_model.pt) introuvables dans {args.exp_dir}")
         return
 
     # 1. Charger la config de l'expérience
@@ -85,8 +86,7 @@ def main():
     
     # 3. Load checkpoint first, infer input_dim from the saved weights
     gc = GatingConfig()
-    checkpoint = torch.load(args.exp_dir / "best_model.pt", map_location=dev, weights_only=False)
-    state_dict = checkpoint["model_state_dict"]
+    state_dict = load_model_state(args.exp_dir)
     
     # Infer input_dim from the attention layer weight shape
     if "attention.attention_v.weight" in state_dict:
@@ -113,7 +113,7 @@ def main():
 
     model.load_state_dict(state_dict)
     model.eval()
-    print("✅ Modèle chargé (Early Stopped à l'epoch {})".format(checkpoint.get("epoch", "?")))
+    print("✅ Modèle chargé")
 
     # 4. Préparer le Dataset (même split que l'entrainement)
     full_dataset = SlideEmbeddingDataset(

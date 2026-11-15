@@ -17,7 +17,7 @@ jobs:
           uv venv
           uv pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
           uv pip install h5py matplotlib numpy openpyxl openslide-bin openslide-python \
-            opencv-python-headless pandas pillow scikit-learn seaborn timm torchstain tqdm pytest
+            opencv-python-headless pandas pillow safetensors scikit-learn seaborn timm torchstain tqdm pytest
       - name: Run tests
         run: uv run --no-sync pytest -m "not network" -q
       - name: Derived analyses reproduce from results/

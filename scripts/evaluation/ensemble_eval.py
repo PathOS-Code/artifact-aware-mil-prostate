@@ -40,6 +40,7 @@ from prostate_mil.models.mil.model import CustomMILModel
 from prostate_mil.training.mil.dataset import SlideEmbeddingDataset
 from prostate_mil.training.mil.losses import coral_predict
 from prostate_mil.training.mil.splits import fixed_split_indices
+from prostate_mil.utils.io import find_checkpoint, load_model_state
 
 
 def build_model_from_config(config: dict, state_dict: dict, device: torch.device) -> CustomMILModel:
@@ -94,7 +95,7 @@ def _batch_slide_name(batch: dict) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--exp-dirs", nargs="+", required=True, type=Path,
-                    help="Experiment dirs to ensemble (each needs best_model.pt + config.json).")
+                    help="Experiment dirs to ensemble (each needs config.json and best_model.safetensors or best_model.pt).")
     ap.add_argument("--embeddings-dir", type=Path, required=True)
     ap.add_argument("--labels-csv", type=Path, required=True)
     ap.add_argument("--val-ratio", type=float, default=0.15)
@@ -137,13 +138,11 @@ def main() -> None:
 
     for i, exp_dir in enumerate(args.exp_dirs):
         config_path = exp_dir / "config.json"
-        ckpt_path = exp_dir / "best_model.pt"
-        if not config_path.exists() or not ckpt_path.exists():
+        if not config_path.exists() or find_checkpoint(exp_dir) is None:
             raise FileNotFoundError(f"Missing config or checkpoint in {exp_dir}")
 
         config = json.loads(config_path.read_text())
-        ckpt = torch.load(ckpt_path, map_location=dev, weights_only=False)
-        model = build_model_from_config(config, ckpt["model_state_dict"], dev)
+        model = build_model_from_config(config, load_model_state(exp_dir), dev)
 
         ordinal = config.get("loss_type", "focal") == "coral"
         member_probs = []
