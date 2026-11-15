@@ -135,6 +135,6 @@ published.
 
 - Akram Samir Ounis, University of Algiers 1 Benyoucef Benkhedda
 - Chawki Ahmed Ramzi Belhaddad, University of Algiers 1 Benyoucef Benkhedda
-- Dr. Khaled Lounis, pathologist, University of Algiers 1 Benyoucef Benkhedda
-- Prof. Chaouki Boufenar, École Nationale Supérieure d'Intelligence Artificielle (ENSIA) and University of Algiers 1 Benyoucef Benkhedda
+- Dr. Khaled Lounis, pathologist
+- Prof. Chaouki Boufenar, École Nationale Supérieure d'Intelligence Artificielle (ENSIA)
 - Prof. Mohammed Al-Sarem, Taibah University, Saudi Arabia
