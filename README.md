@@ -1,5 +1,8 @@
 # Aggregation, ordinal training and artifact gating in MIL for prostate biopsy grading
 
+[![DOI](https://zenodo.org/badge/1459044255.svg)](https://doi.org/10.5281/zenodo.24261385)
+[![Weights DOI](https://img.shields.io/badge/weights%20DOI-10.57967%2Fhf%2F11655-yellow)](https://doi.org/10.57967/hf/11655)
+
 Publicly available code (PolyForm Noncommercial), data splits and result
 files for the paper *Aggregation, Ordinal
 Training, and Artifact Gating in Multiple Instance Learning for Prostate
@@ -98,7 +101,8 @@ uv run python scripts/evaluation/ci_from_confusion_matrices.py
 
 The 30 MIL heads behind every ensemble in the paper are on Hugging Face:
 [PathOS-Code/artifact-aware-mil-prostate](https://huggingface.co/PathOS-Code/artifact-aware-mil-prostate)
-(safetensors, about 4.1 GB in total, same folder names as `results/runs/`).
+(DOI [10.57967/hf/11655](https://doi.org/10.57967/hf/11655); safetensors,
+about 4.1 GB in total, same folder names as `results/runs/`).
 They are released under CC BY-NC-SA 4.0 because they were trained on PANDA.
 They take Virchow2 embeddings as input, so using them requires access to
 Virchow2 under its own license.

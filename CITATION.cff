@@ -3,8 +3,8 @@ message: "If you use this code, please cite the paper below."
 title: "artifact-aware-mil-prostate"
 version: 1.0.0
 license: PolyForm-Noncommercial-1.0.0
-# TODO: add the Zenodo DOI after the first release
-# doi: 10.5281/zenodo.XXXXXXX
+# Concept DOI (all versions); version 1.0.0 is 10.5281/zenodo.24261386
+doi: 10.5281/zenodo.24261385
 repository-code: "https://github.com/PathOS-Code/artifact-aware-mil-prostate"
 authors:
   - family-names: Boufenar
