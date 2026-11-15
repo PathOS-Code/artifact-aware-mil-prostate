@@ -9,10 +9,10 @@ repository-code: "https://github.com/PathOS-Code/artifact-aware-mil-prostate"
 authors:
   - family-names: Boufenar
     given-names: Chaouki
-    affiliation: "University of Algiers 1 Benyoucef Benkhedda"
+    affiliation: "École Nationale Supérieure des Nanosciences et Nanotechnologies (ENSNN)"
   - family-names: Lounis
     given-names: Khaled
-    affiliation: "University of Algiers 1 Benyoucef Benkhedda"
+    affiliation: "Laboratoire d'Anatomie Pathologique, Centre Hospitalo-Universitaire d'Hussein Dey, Algiers"
   - family-names: Ounis
     given-names: Akram Samir
     affiliation: "University of Algiers 1 Benyoucef Benkhedda"
@@ -21,7 +21,7 @@ authors:
     affiliation: "University of Algiers 1 Benyoucef Benkhedda"
   - family-names: Al-Sarem
     given-names: Mohammed
-    affiliation: "Taibah University"
+    affiliation: "Department of Information Systems, College of Computer Science and Engineering, Taibah University, Madinah, Saudi Arabia"
 preferred-citation:
   type: article
   title: "Aggregation, Ordinal Training, and Artifact Gating in Multiple Instance Learning for Prostate Biopsy Grading"
@@ -35,3 +35,5 @@ preferred-citation:
       given-names: Akram Samir
     - family-names: Belhaddad
       given-names: Chawki Ahmed Ramzi
+    - family-names: Al-Sarem
+      given-names: Mohammed

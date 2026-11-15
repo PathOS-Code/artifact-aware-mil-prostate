@@ -3,7 +3,7 @@
 Publicly available code (PolyForm Noncommercial), data splits and result
 files for the paper *Aggregation, Ordinal
 Training, and Artifact Gating in Multiple Instance Learning for Prostate
-Biopsy Grading* (Boufenar, Lounis, Ounis, Belhaddad; submitted).
+Biopsy Grading* (Boufenar, Lounis, Ounis, Belhaddad, Al-Sarem; submitted).
 
 The pipeline predicts the ISUP grade group (0–5) of a prostate biopsy
 whole-slide image from frozen foundation-model patch embeddings:
@@ -65,7 +65,7 @@ weights on precomputed embeddings):
 uv venv --python 3.12
 uv pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
 uv pip install h5py matplotlib numpy openpyxl openslide-bin openslide-python opencv-python \
-  pandas pillow scikit-learn seaborn timm torchstain tqdm pytest
+  pandas pillow safetensors scikit-learn seaborn timm torchstain tqdm pytest
 ```
 
 In a CPU environment use `uv run --no-sync ...` (or activate `.venv` and call
@@ -105,7 +105,10 @@ Virchow2 under its own license.
 
 ```bash
 hf download PathOS-Code/artifact-aware-mil-prostate --local-dir weights
-uv run python scripts/evaluation/ensemble_eval.py   --exp-dirs weights/virchow2_transmil_focal_fullgate_5seed/seed{0,1,2,3,4}   --embeddings-dir outputs/embeddings_virchow2 --labels-csv data/panda_labels.csv   --split-csv splits/panda_fixed_split.csv --out outputs/ensembles/panda.json
+uv run python scripts/evaluation/ensemble_eval.py \
+  --exp-dirs weights/virchow2_transmil_focal_fullgate_5seed/seed{0,1,2,3,4} \
+  --embeddings-dir outputs/embeddings_virchow2 --labels-csv data/panda_labels.csv \
+  --split-csv splits/panda_fixed_split.csv --out outputs/ensembles/panda.json
 ```
 
 ## Tests
@@ -134,13 +137,13 @@ noncommercial use by their own terms.
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff). TODO: add the journal reference once
-published.
+See [`CITATION.cff`](CITATION.cff). The journal reference will be added once
+the paper is published.
 
 ## Contributors
 
 - Akram Samir Ounis, University of Algiers 1 Benyoucef Benkhedda
 - Chawki Ahmed Ramzi Belhaddad, University of Algiers 1 Benyoucef Benkhedda
-- Dr. Khaled Lounis, pathologist
-- Prof. Chaouki Boufenar, École Nationale Supérieure d'Intelligence Artificielle (ENSIA)
-- Prof. Mohammed Al-Sarem, Taibah University, Saudi Arabia
+- Dr. Khaled Lounis, pathologist, Laboratoire d'Anatomie Pathologique, Centre Hospitalo-Universitaire d'Hussein Dey, Algiers
+- Prof. Chaouki Boufenar, École Nationale Supérieure des Nanosciences et Nanotechnologies (ENSNN), Algiers
+- Prof. Mohammed Al-Sarem, Department of Information Systems, College of Computer Science and Engineering, Taibah University, Madinah, Saudi Arabia
