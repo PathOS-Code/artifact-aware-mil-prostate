@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "artifact-aware-mil-prostate"
+version: 1.0.0
+license: PolyForm-Noncommercial-1.0.0
+# TODO: add the Zenodo DOI after the first release
+# doi: 10.5281/zenodo.XXXXXXX
+repository-code: "https://github.com/PathOS-Code/artifact-aware-mil-prostate"
+authors:
+  - family-names: Boufenar
+    given-names: Chaouki
+    affiliation: "University of Algiers 1 Benyoucef Benkhedda"
+  - family-names: Lounis
+    given-names: Khaled
+    affiliation: "University of Algiers 1 Benyoucef Benkhedda"
+  - family-names: Ounis
+    given-names: Akram Samir
+    affiliation: "University of Algiers 1 Benyoucef Benkhedda"
+  - family-names: Belhaddad
+    given-names: Chawki Ahmed Ramzi
+    affiliation: "University of Algiers 1 Benyoucef Benkhedda"
+  - family-names: Al-Sarem
+    given-names: Mohammed
+    affiliation: "Taibah University"
+preferred-citation:
+  type: article
+  title: "Aggregation, Ordinal Training, and Artifact Gating in Multiple Instance Learning for Prostate Biopsy Grading"
+  # TODO: journal, year, volume, DOI once published
+  authors:
+    - family-names: Boufenar
+      given-names: Chaouki
+    - family-names: Lounis
+      given-names: Khaled
+    - family-names: Ounis
+      given-names: Akram Samir
+    - family-names: Belhaddad
+      given-names: Chawki Ahmed Ramzi

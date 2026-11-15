@@ -1,0 +1,15 @@
+Evaluating: virchow2_abmil_gated_75_15_10_split
+Validation QWK: 0.8805
+
+              precision    recall  f1-score   support
+
+      ISUP 0       0.92      0.94      0.93       309
+      ISUP 1       0.77      0.83      0.80       236
+      ISUP 2       0.58      0.53      0.56       143
+      ISUP 3       0.58      0.50      0.54       140
+      ISUP 4       0.65      0.66      0.66       126
+      ISUP 5       0.72      0.78      0.74       107
+
+    accuracy                           0.75      1061
+   macro avg       0.70      0.71      0.70      1061
+weighted avg       0.75      0.75      0.75      1061

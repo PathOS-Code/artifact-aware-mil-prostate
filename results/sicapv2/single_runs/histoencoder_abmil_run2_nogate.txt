@@ -1,0 +1,15 @@
+Evaluating: run2_nogating_baseline
+Validation QWK: 0.8629
+
+              precision    recall  f1-score   support
+
+      ISUP 0       0.89      0.86      0.87        36
+      ISUP 1       0.24      0.71      0.36        14
+      ISUP 2       0.45      0.23      0.30        22
+      ISUP 3       0.58      0.30      0.40        23
+      ISUP 4       0.40      0.11      0.17        18
+      ISUP 5       0.70      0.83      0.76        42
+
+    accuracy                           0.58       155
+   macro avg       0.54      0.51      0.48       155
+weighted avg       0.61      0.58      0.56       155

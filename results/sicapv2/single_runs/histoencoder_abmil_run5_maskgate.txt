@@ -1,0 +1,15 @@
+Evaluating: run5_gated_patchdrop
+Validation QWK: 0.8650
+
+              precision    recall  f1-score   support
+
+      ISUP 0       0.97      0.94      0.96        36
+      ISUP 1       0.32      0.86      0.47        14
+      ISUP 2       0.40      0.09      0.15        22
+      ISUP 3       0.38      0.35      0.36        23
+      ISUP 4       0.43      0.17      0.24        18
+      ISUP 5       0.66      0.79      0.72        42
+
+    accuracy                           0.59       155
+   macro avg       0.53      0.53      0.48       155
+weighted avg       0.60      0.59      0.56       155

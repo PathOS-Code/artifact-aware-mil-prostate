@@ -1,0 +1,15 @@
+Evaluating: run1_virchow2_gated
+Validation QWK: 0.7233
+
+              precision    recall  f1-score   support
+
+      ISUP 0       0.96      0.72      0.83        36
+      ISUP 1       0.26      0.79      0.39        14
+      ISUP 2       0.20      0.05      0.07        22
+      ISUP 3       0.31      0.17      0.22        23
+      ISUP 4       0.29      0.11      0.16        18
+      ISUP 5       0.56      0.81      0.66        42
+
+    accuracy                           0.50       155
+   macro avg       0.43      0.44      0.39       155
+weighted avg       0.51      0.50      0.47       155

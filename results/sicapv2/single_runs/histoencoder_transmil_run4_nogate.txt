@@ -1,0 +1,15 @@
+Evaluating: run4_transmil_4layers_nogate
+Validation QWK: 0.7845
+
+              precision    recall  f1-score   support
+
+      ISUP 0       0.94      0.89      0.91        36
+      ISUP 1       0.46      0.86      0.60        14
+      ISUP 2       0.62      0.36      0.46        22
+      ISUP 3       0.47      0.39      0.43        23
+      ISUP 4       0.50      0.17      0.25        18
+      ISUP 5       0.60      0.81      0.69        42
+
+    accuracy                           0.63       155
+   macro avg       0.60      0.58      0.56       155
+weighted avg       0.64      0.63      0.61       155

@@ -1,0 +1,26 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - name: Install CPU dependencies
+        run: |
+          uv venv
+          uv pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+          uv pip install h5py matplotlib numpy openpyxl openslide-bin openslide-python \
+            opencv-python-headless pandas pillow scikit-learn seaborn timm torchstain tqdm pytest
+      - name: Run tests
+        run: uv run --no-sync pytest -m "not network" -q
+      - name: Derived analyses reproduce from results/
+        run: |
+          uv run --no-sync python scripts/evaluation/ci_from_confusion_matrices.py
+          uv run --no-sync python scripts/evaluation/training_log_divergence.py

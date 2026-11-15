@@ -1,0 +1,51 @@
+[project]
+name = "artifact-aware-mil-prostate"
+version = "1.0.0"
+description = "Artifact-aware multiple instance learning for ISUP grading of prostate biopsy whole-slide images"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = [
+    "h5py>=3.11,<4.0",
+    "matplotlib>=3.10.8",
+    "numpy>=1.26,<3.0",
+    "opencv-python>=4.10,<5.0",
+    "openpyxl>=3.1.5",
+    "openslide-bin>=4.0.0.8,<5.0",
+    "openslide-python>=1.4.3,<2.0",
+    "pandas>=2.2,<3.0",
+    "pillow>=10.4,<12.0",
+    "scikit-learn>=1.5,<2.0",
+    "seaborn>=0.13.2",
+    "timm>=1.0.0",
+    "torch>=2.4,<2.7",
+    "torchstain>=1.4.1,<2.0",
+    "torchvision>=0.19,<0.22",
+    "tqdm>=4.66,<5.0",
+]
+
+# GPU wheels (CUDA 12.4) by default. For a CPU-only install see README.md.
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu124" },
+]
+torchvision = [
+    { index = "pytorch-cu124" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+    "network: downloads pretrained weights (skipped in CI with -m 'not network')",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]

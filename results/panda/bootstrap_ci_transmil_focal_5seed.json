@@ -1,0 +1,190 @@
+{
+  "settings": {
+    "nogate": {
+      "qwk": {
+        "point": 0.9063003549302538,
+        "ci_low": 0.880223705339499,
+        "ci_high": 0.9289844090246042
+      },
+      "accuracy": {
+        "point": 0.820923656927427,
+        "ci_low": 0.7973609802073516,
+        "ci_high": 0.8435438265786993
+      },
+      "macro_f1": {
+        "point": 0.7929523332008418,
+        "ci_low": 0.7659721366337912,
+        "ci_high": 0.8182433618623157
+      },
+      "weighted_f1": {
+        "point": 0.8198689373723691,
+        "ci_low": 0.7963262116937918,
+        "ci_high": 0.8430531994248398
+      }
+    },
+    "mask": {
+      "qwk": {
+        "point": 0.9103762706756822,
+        "ci_low": 0.8826484364118938,
+        "ci_high": 0.9341334453359398
+      },
+      "accuracy": {
+        "point": 0.822808671065033,
+        "ci_low": 0.7992459943449576,
+        "ci_high": 0.8454288407163054
+      },
+      "macro_f1": {
+        "point": 0.79811521152609,
+        "ci_low": 0.7715310413102732,
+        "ci_high": 0.8230033551056165
+      },
+      "weighted_f1": {
+        "point": 0.8229225579001754,
+        "ci_low": 0.7997647135944415,
+        "ci_high": 0.8458188030727867
+      }
+    },
+    "full": {
+      "qwk": {
+        "point": 0.9134128302411376,
+        "ci_low": 0.8856481449585533,
+        "ci_high": 0.936803664116889
+      },
+      "accuracy": {
+        "point": 0.824693685202639,
+        "ci_low": 0.8020735155513666,
+        "ci_high": 0.8473138548539114
+      },
+      "macro_f1": {
+        "point": 0.8002395630263829,
+        "ci_low": 0.7735544873397151,
+        "ci_high": 0.8253974600653682
+      },
+      "weighted_f1": {
+        "point": 0.8247608421243916,
+        "ci_low": 0.8015965102284545,
+        "ci_high": 0.8472703230268688
+      }
+    }
+  },
+  "deltas": {
+    "full_minus_mask": {
+      "qwk": {
+        "point": 0.003070282384798851,
+        "ci_low": -0.0004956467929998848,
+        "ci_high": 0.007697048033280877
+      },
+      "accuracy": {
+        "point": 0.0019493873704052784,
+        "ci_low": -0.005655042412818112,
+        "ci_high": 0.009425070688030224
+      },
+      "macro_f1": {
+        "point": 0.002223564445014136,
+        "ci_low": -0.0073675796372663135,
+        "ci_high": 0.011783445012021408
+      },
+      "weighted_f1": {
+        "point": 0.0019087856404354617,
+        "ci_low": -0.005795091993505147,
+        "ci_high": 0.009614514957937845
+      }
+    },
+    "full_minus_nogate": {
+      "qwk": {
+        "point": 0.007132884511506731,
+        "ci_low": -0.0031707854843534776,
+        "ci_high": 0.01819616180026993
+      },
+      "accuracy": {
+        "point": 0.003845240339302545,
+        "ci_low": -0.007540056550424223,
+        "ci_high": 0.016022620169651173
+      },
+      "macro_f1": {
+        "point": 0.007430669368873761,
+        "ci_low": -0.006878498529901636,
+        "ci_high": 0.022101090990872735
+      },
+      "weighted_f1": {
+        "point": 0.004965795152193676,
+        "ci_low": -0.007069542877608132,
+        "ci_high": 0.016997977057697483
+      }
+    },
+    "mask_minus_nogate": {
+      "qwk": {
+        "point": 0.00406260212670788,
+        "ci_low": -0.005816663851641354,
+        "ci_high": 0.014728789561052422
+      },
+      "accuracy": {
+        "point": 0.001895852968897266,
+        "ci_low": -0.010367577756833168,
+        "ci_high": 0.014137606032045169
+      },
+      "macro_f1": {
+        "point": 0.005207104923859625,
+        "ci_low": -0.00967202094020873,
+        "ci_high": 0.02024085628023044
+      },
+      "weighted_f1": {
+        "point": 0.0030570095117582147,
+        "ci_low": -0.008904732575096823,
+        "ci_high": 0.015385367194846506
+      }
+    }
+  },
+  "metadata": {
+    "n_test": 1061,
+    "n_bootstrap": 10000,
+    "alpha": 0.05,
+    "split_seed": 42,
+    "member_qwk": {
+      "nogate": [
+        0.8993869101159053,
+        0.8921781517607807,
+        0.8995772593125047,
+        0.898912447422194,
+        0.9021066390150234
+      ],
+      "mask": [
+        0.8948219294071946,
+        0.8903955881892175,
+        0.8972976612838739,
+        0.8947555714265344,
+        0.8991794900856422
+      ],
+      "full": [
+        0.8956000797685292,
+        0.8879857814296552,
+        0.8997685203765665,
+        0.8974114546548229,
+        0.9029006461462826
+      ]
+    },
+    "setting_dirs": {
+      "nogate": [
+        "outputs\\experiments\\virchow2\\transmil\\no-gate\\seed_esemble_nogate_run\\virchow2_transmil_nogating_seed0",
+        "outputs\\experiments\\virchow2\\transmil\\no-gate\\seed_esemble_nogate_run\\virchow2_transmil_nogating_seed1",
+        "outputs\\experiments\\virchow2\\transmil\\no-gate\\seed_esemble_nogate_run\\virchow2_transmil_nogating_seed2",
+        "outputs\\experiments\\virchow2\\transmil\\no-gate\\seed_esemble_nogate_run\\virchow2_transmil_nogating_seed3",
+        "outputs\\experiments\\virchow2\\transmil\\no-gate\\seed_esemble_nogate_run\\virchow2_transmil_nogating_seed4"
+      ],
+      "mask": [
+        "outputs\\experiments\\virchow2\\transmil\\mask-gate\\seed_esemble_gate_run\\virchow2_transmil_gated_seed0",
+        "outputs\\experiments\\virchow2\\transmil\\mask-gate\\seed_esemble_gate_run\\virchow2_transmil_gated_seed1",
+        "outputs\\experiments\\virchow2\\transmil\\mask-gate\\seed_esemble_gate_run\\virchow2_transmil_gated_seed2",
+        "outputs\\experiments\\virchow2\\transmil\\mask-gate\\seed_esemble_gate_run\\virchow2_transmil_gated_seed3",
+        "outputs\\experiments\\virchow2\\transmil\\mask-gate\\seed_esemble_gate_run\\virchow2_transmil_gated_seed4"
+      ],
+      "full": [
+        "outputs\\experiments\\virchow2\\transmil\\full-gate\\fullgate_5seed_ensemble\\gated_transmil_v2_fullgate_seed0",
+        "outputs\\experiments\\virchow2\\transmil\\full-gate\\fullgate_5seed_ensemble\\gated_transmil_v2_fullgate_seed1",
+        "outputs\\experiments\\virchow2\\transmil\\full-gate\\fullgate_5seed_ensemble\\gated_transmil_v2_fullgate_seed2",
+        "outputs\\experiments\\virchow2\\transmil\\full-gate\\fullgate_5seed_ensemble\\gated_transmil_v2_fullgate_seed3",
+        "outputs\\experiments\\virchow2\\transmil\\full-gate\\fullgate_5seed_ensemble\\gated_transmil_v2_fullgate_seed4"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+Evaluating: run1_histoencoder_gated
+Validation QWK: 0.8366
+
+              precision    recall  f1-score   support
+
+      ISUP 0       0.97      0.92      0.94        36
+      ISUP 1       0.32      0.79      0.46        14
+      ISUP 2       0.50      0.09      0.15        22
+      ISUP 3       0.55      0.26      0.35        23
+      ISUP 4       0.25      0.06      0.09        18
+      ISUP 5       0.54      0.88      0.67        42
+
+    accuracy                           0.58       155
+   macro avg       0.52      0.50      0.45       155
+weighted avg       0.58      0.58      0.53       155

@@ -1,0 +1,73 @@
+{
+  "n_models": 5,
+  "exp_dirs": [
+    "outputs\\experiments\\virchow2\\transmil\\virchow2_transmil_gated_seed0",
+    "outputs\\experiments\\virchow2\\transmil\\virchow2_transmil_gated_seed1",
+    "outputs\\experiments\\virchow2\\transmil\\virchow2_transmil_gated_seed2",
+    "outputs\\experiments\\virchow2\\transmil\\virchow2_transmil_gated_seed3",
+    "outputs\\experiments\\virchow2\\transmil\\virchow2_transmil_gated_seed4"
+  ],
+  "per_member_test_qwk": [
+    0.8948219294071946,
+    0.8903955881892175,
+    0.8972976612838739,
+    0.8947555714265344,
+    0.8991794900856422
+  ],
+  "per_member_mean": 0.8952900480784927,
+  "per_member_std": 0.0029536014592030095,
+  "ensemble_test_qwk": 0.9103762706756822,
+  "ensemble_test_acc": 0.822808671065033,
+  "ensemble_lift_over_mean": 0.015086222597189503,
+  "confusion_matrix": [
+    [
+      287,
+      17,
+      0,
+      2,
+      0,
+      3
+    ],
+    [
+      7,
+      205,
+      23,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      26,
+      96,
+      17,
+      2,
+      2
+    ],
+    [
+      2,
+      1,
+      15,
+      104,
+      12,
+      6
+    ],
+    [
+      1,
+      5,
+      4,
+      20,
+      92,
+      4
+    ],
+    [
+      4,
+      1,
+      1,
+      4,
+      8,
+      89
+    ]
+  ],
+  "n_test_slides": 1061
+}

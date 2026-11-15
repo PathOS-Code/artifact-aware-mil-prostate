@@ -1,0 +1,15 @@
+Evaluating: gated_transmil_v2_fixed
+Test QWK: 0.8956
+
+              precision    recall  f1-score   support
+
+      ISUP 0       0.93      0.93      0.93       309
+      ISUP 1       0.77      0.83      0.80       236
+      ISUP 2       0.63      0.62      0.63       143
+      ISUP 3       0.69      0.65      0.67       140
+      ISUP 4       0.79      0.68      0.73       126
+      ISUP 5       0.80      0.86      0.83       107
+
+    accuracy                           0.79      1061
+   macro avg       0.77      0.76      0.76      1061
+weighted avg       0.79      0.79      0.79      1061

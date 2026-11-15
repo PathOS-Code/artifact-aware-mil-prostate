@@ -1,0 +1,73 @@
+{
+  "n_models": 5,
+  "exp_dirs": [
+    "outputs\\experiments\\virchow2\\transmil\\seed_esemble_gate_run\\virchow2_transmil_gated_seed0",
+    "outputs\\experiments\\virchow2\\transmil\\seed_esemble_gate_run\\virchow2_transmil_gated_seed1",
+    "outputs\\experiments\\virchow2\\transmil\\seed_esemble_gate_run\\virchow2_transmil_gated_seed2",
+    "outputs\\experiments\\virchow2\\transmil\\seed_esemble_gate_run\\virchow2_transmil_gated_seed3",
+    "outputs\\experiments\\virchow2\\transmil\\seed_esemble_gate_run\\virchow2_transmil_gated_seed4"
+  ],
+  "per_member_test_qwk": [
+    0.8507415741211197,
+    0.8407177581913758,
+    0.836224003298714,
+    0.752535898091384,
+    0.8739487309003662
+  ],
+  "per_member_mean": 0.8308335929205919,
+  "per_member_std": 0.04126142290616758,
+  "ensemble_test_qwk": 0.8632967337878548,
+  "ensemble_test_acc": 0.6064516129032258,
+  "ensemble_lift_over_mean": 0.032463140867262874,
+  "confusion_matrix": [
+    [
+      35,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      2,
+      12,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      19,
+      2,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      4,
+      2,
+      5,
+      1,
+      11
+    ],
+    [
+      0,
+      2,
+      0,
+      1,
+      2,
+      13
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      3,
+      38
+    ]
+  ],
+  "n_test_slides": 155
+}

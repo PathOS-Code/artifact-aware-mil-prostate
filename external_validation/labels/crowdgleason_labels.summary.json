@@ -1,0 +1,33 @@
+{
+  "dataset_root": "data/raw/crowdgleason-dataset",
+  "split": "test",
+  "annotations_csv": "data/raw/crowdgleason-dataset/Annotations/test.csv",
+  "patch_root": "data/raw/crowdgleason-dataset/NormalizedPatches/test",
+  "n_annotation_rows": 2926,
+  "n_manifest_rows": 2926,
+  "n_unique_slides": 232,
+  "n_missing_patches": 0,
+  "patch_ground_truth_counts": {
+    "0": 2157,
+    "1": 548,
+    "2": 164,
+    "3": 57
+  },
+  "isup_counts": {
+    "0": 112,
+    "1": 83,
+    "2": 6,
+    "3": 7,
+    "4": 15,
+    "5": 9
+  },
+  "gleason_raw_counts": {
+    "3+3": 83,
+    "3+4": 6,
+    "4+3": 7,
+    "4+4": 15,
+    "5+4": 4,
+    "5+5": 5,
+    "benign": 112
+  }
+}

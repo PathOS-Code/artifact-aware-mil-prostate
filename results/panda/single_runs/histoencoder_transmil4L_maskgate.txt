@@ -1,0 +1,15 @@
+Evaluating: histoencoder_transmil_4L_gated_75_15_10
+Test QWK: 0.8797
+
+              precision    recall  f1-score   support
+
+      ISUP 0       0.91      0.94      0.92       309
+      ISUP 1       0.82      0.82      0.82       236
+      ISUP 2       0.59      0.69      0.64       143
+      ISUP 3       0.74      0.60      0.66       140
+      ISUP 4       0.72      0.71      0.71       126
+      ISUP 5       0.86      0.80      0.83       107
+
+    accuracy                           0.79      1061
+   macro avg       0.77      0.76      0.76      1061
+weighted avg       0.80      0.79      0.79      1061

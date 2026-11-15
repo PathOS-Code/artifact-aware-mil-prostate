@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+.env
+.DS_Store
+.claude/
+
+# Data, embeddings, checkpoints and run outputs are never committed
+data/*
+!data/panda_labels.csv
+!data/README.md
+!data/.gitkeep
+embeddings/
+outputs/
+*.pt
+*.pth
+*.npy

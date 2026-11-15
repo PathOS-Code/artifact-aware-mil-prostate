@@ -1,0 +1,15 @@
+Evaluating: histoencoder_transmil_4L_nogate_75_15_10
+Test QWK: 0.8956
+
+              precision    recall  f1-score   support
+
+      ISUP 0       0.93      0.94      0.94       309
+      ISUP 1       0.81      0.89      0.84       236
+      ISUP 2       0.70      0.64      0.67       143
+      ISUP 3       0.70      0.75      0.73       140
+      ISUP 4       0.76      0.68      0.72       126
+      ISUP 5       0.84      0.76      0.79       107
+
+    accuracy                           0.81      1061
+   macro avg       0.79      0.78      0.78      1061
+weighted avg       0.81      0.81      0.81      1061

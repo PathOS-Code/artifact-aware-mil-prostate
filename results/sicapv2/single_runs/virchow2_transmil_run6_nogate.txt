@@ -1,0 +1,15 @@
+Evaluating: run6_virchow2_transmil_nogating
+Validation QWK: 0.7828
+
+              precision    recall  f1-score   support
+
+      ISUP 0       0.94      0.86      0.90        36
+      ISUP 1       0.32      0.71      0.44        14
+      ISUP 2       0.25      0.05      0.08        22
+      ISUP 3       0.00      0.00      0.00        23
+      ISUP 4       0.25      0.17      0.20        18
+      ISUP 5       0.51      0.88      0.64        42
+
+    accuracy                           0.53       155
+   macro avg       0.38      0.44      0.38       155
+weighted avg       0.45      0.53      0.46       155

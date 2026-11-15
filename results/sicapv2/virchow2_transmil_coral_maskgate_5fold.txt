@@ -1,0 +1,12 @@
+              precision    recall  f1-score   support
+
+      ISUP 0       0.97      0.97      0.97        36
+      ISUP 1       0.39      1.00      0.56        14
+      ISUP 2       0.33      0.09      0.14        22
+      ISUP 3       0.80      0.52      0.63        23
+      ISUP 4       0.35      0.33      0.34        18
+      ISUP 5       0.71      0.76      0.74        42
+
+    accuracy                           0.65       155
+   macro avg       0.59      0.61      0.56       155
+weighted avg       0.66      0.65      0.63       155

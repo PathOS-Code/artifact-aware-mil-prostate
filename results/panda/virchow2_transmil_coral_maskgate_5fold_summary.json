@@ -1,0 +1,54 @@
+{
+  "experiment_name": "virchow2_transmil_gated_5fold_coral",
+  "n_folds": 5,
+  "n_total_slides": 10614,
+  "fold_results": [
+    {
+      "fold": 1,
+      "best_val_qwk": 0.9217563225587565,
+      "best_epoch": 22,
+      "train_slides": 8491,
+      "val_slides": 2123,
+      "time": "2h27m25s"
+    },
+    {
+      "fold": 2,
+      "best_val_qwk": 0.9186392839205172,
+      "best_epoch": 28,
+      "train_slides": 8491,
+      "val_slides": 2123,
+      "time": "2h57m16s"
+    },
+    {
+      "fold": 3,
+      "best_val_qwk": 0.927293241921137,
+      "best_epoch": 36,
+      "train_slides": 8491,
+      "val_slides": 2123,
+      "time": "3h41m17s"
+    },
+    {
+      "fold": 4,
+      "best_val_qwk": 0.9183432329171636,
+      "best_epoch": 28,
+      "train_slides": 8491,
+      "val_slides": 2123,
+      "time": "2h57m52s"
+    },
+    {
+      "fold": 5,
+      "best_val_qwk": 0.9268811187789894,
+      "best_epoch": 36,
+      "train_slides": 8492,
+      "val_slides": 2122,
+      "time": "3h42m18s"
+    }
+  ],
+  "mean_val_qwk": 0.9225826400193128,
+  "std_val_qwk": 0.0038696800997018574,
+  "min_val_qwk": 0.9183432329171636,
+  "max_val_qwk": 0.927293241921137,
+  "global_oof_qwk": 0.9226080409770103,
+  "global_oof_acc": 0.7785943094026757,
+  "total_time": "15h48m00s"
+}

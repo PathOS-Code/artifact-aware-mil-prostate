@@ -1,0 +1,8 @@
+CrowdGleason paired bootstrap QWK deltas
+n_slides: 232
+n_resamples: 10000
+
+comparison	delta_qwk	ci95_low	ci95_high	crosses_zero
+full_minus_mask	0.004748	-0.003652	0.017520	True
+full_minus_no_gate	-0.000070	-0.031126	0.030990	True
+mask_minus_no_gate	-0.004819	-0.037899	0.027492	True

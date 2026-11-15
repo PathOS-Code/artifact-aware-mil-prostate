@@ -1,0 +1,73 @@
+{
+  "n_models": 5,
+  "exp_dirs": [
+    "outputs\\experiments\\virchow2\\abmil\\virchow2_abmil_gated_seed0",
+    "outputs\\experiments\\virchow2\\abmil\\virchow2_abmil_gated_seed1",
+    "outputs\\experiments\\virchow2\\abmil\\virchow2_abmil_gated_seed2",
+    "outputs\\experiments\\virchow2\\abmil\\virchow2_abmil_gated_seed3",
+    "outputs\\experiments\\virchow2\\abmil\\virchow2_abmil_gated_seed4"
+  ],
+  "per_member_test_qwk": [
+    0.86866614886344,
+    0.8676781845438475,
+    0.8783902257610213,
+    0.8746985830450681,
+    0.8844392436742532
+  ],
+  "per_member_mean": 0.874774477177526,
+  "per_member_std": 0.0062314709838065625,
+  "ensemble_test_qwk": 0.8919208767750937,
+  "ensemble_test_acc": 0.7756833176248822,
+  "ensemble_lift_over_mean": 0.017146399597567696,
+  "confusion_matrix": [
+    [
+      294,
+      9,
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      11,
+      195,
+      29,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      24,
+      86,
+      26,
+      3,
+      3
+    ],
+    [
+      2,
+      5,
+      15,
+      83,
+      19,
+      16
+    ],
+    [
+      3,
+      3,
+      8,
+      14,
+      78,
+      20
+    ],
+    [
+      4,
+      2,
+      1,
+      2,
+      11,
+      87
+    ]
+  ],
+  "n_test_slides": 1061
+}

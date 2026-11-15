@@ -1,0 +1,73 @@
+{
+  "n_models": 5,
+  "exp_dirs": [
+    "outputs\\experiments\\virchow2\\transmil\\virchow2_transmil_gated_5fold_coral\\fold_1",
+    "outputs\\experiments\\virchow2\\transmil\\virchow2_transmil_gated_5fold_coral\\fold_2",
+    "outputs\\experiments\\virchow2\\transmil\\virchow2_transmil_gated_5fold_coral\\fold_3",
+    "outputs\\experiments\\virchow2\\transmil\\virchow2_transmil_gated_5fold_coral\\fold_4",
+    "outputs\\experiments\\virchow2\\transmil\\virchow2_transmil_gated_5fold_coral\\fold_5"
+  ],
+  "per_member_test_qwk": [
+    0.9036255654895907,
+    0.8897026624627781,
+    0.8394897256631719,
+    0.8653185716734545,
+    0.8866211412056575
+  ],
+  "per_member_mean": 0.8769515332989306,
+  "per_member_std": 0.022388878635830407,
+  "ensemble_test_qwk": 0.8760312833808381,
+  "ensemble_test_acc": 0.6516129032258065,
+  "ensemble_lift_over_mean": -0.000920249918092475,
+  "confusion_matrix": [
+    [
+      35,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      14,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      19,
+      2,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      3,
+      12,
+      4,
+      3
+    ],
+    [
+      0,
+      2,
+      0,
+      2,
+      6,
+      8
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      7,
+      32
+    ]
+  ],
+  "n_test_slides": 155
+}
